@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		2377CE7D273FF8F8001483FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CE7C273FF8F8001483FD /* AppDelegate.swift */; };
 		2377CE7F273FF8F8001483FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CE7E273FF8F8001483FD /* SceneDelegate.swift */; };
-		2377CE81273FF8F8001483FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CE80273FF8F8001483FD /* ViewController.swift */; };
+		2377CE81273FF8F8001483FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CE80273FF8F8001483FD /* MainViewController.swift */; };
 		2377CE84273FF8F8001483FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2377CE82273FF8F8001483FD /* Main.storyboard */; };
 		2377CE86273FF8FA001483FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2377CE85273FF8FA001483FD /* Assets.xcassets */; };
 		2377CE89273FF8FA001483FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2377CE87273FF8FA001483FD /* LaunchScreen.storyboard */; };
+		2377CEB3274054C7001483FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CEB2274054C7001483FD /* LoginViewController.swift */; };
+		23B78912274A8D7A00D5D5C8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78911274A8D7A00D5D5C8 /* MenuViewController.swift */; };
+		23B78914274A8EAD00D5D5C8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78913274A8EAD00D5D5C8 /* CategoryViewController.swift */; };
+		23B78916274A8F0C00D5D5C8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78915274A8F0C00D5D5C8 /* TestViewController.swift */; };
+		23B78919274A962000D5D5C8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78918274A962000D5D5C8 /* ResultViewController.swift */; };
+		23C541C92740621500317775 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C541C82740621500317775 /* RegisterViewController.swift */; };
+		23DD504E274D663A00A9863F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD504D274D663A00A9863F /* Question.swift */; };
+		23DD5051274D683E00A9863F /* TestBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5050274D683E00A9863F /* TestBrain.swift */; };
+		23DD5054274D81FC00A9863F /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5053274D81FC00A9863F /* Constans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2377CE79273FF8F8001483FD /* Matematyka dla maturzystów.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matematyka dla maturzystów.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2377CE7C273FF8F8001483FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2377CE7E273FF8F8001483FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2377CE80273FF8F8001483FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2377CE80273FF8F8001483FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2377CE83273FF8F8001483FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2377CE85273FF8FA001483FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2377CE88273FF8FA001483FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2377CE8A273FF8FA001483FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2377CEB2274054C7001483FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		23B78911274A8D7A00D5D5C8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		23B78913274A8EAD00D5D5C8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		23B78915274A8F0C00D5D5C8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		23B78918274A962000D5D5C8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		23C541C82740621500317775 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		23DD504D274D663A00A9863F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		23DD5050274D683E00A9863F /* TestBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBrain.swift; sourceTree = "<group>"; };
+		23DD5053274D81FC00A9863F /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,48 @@
 		2377CE7B273FF8F8001483FD /* Matematyka dla maturzystów */ = {
 			isa = PBXGroup;
 			children = (
+				23B78917274A95F800D5D5C8 /* Controllers */,
 				2377CE7C273FF8F8001483FD /* AppDelegate.swift */,
+				23DD504F274D664600A9863F /* Models */,
 				2377CE7E273FF8F8001483FD /* SceneDelegate.swift */,
-				2377CE80273FF8F8001483FD /* ViewController.swift */,
-				2377CE82273FF8F8001483FD /* Main.storyboard */,
+				23DD5052274D7D3900A9863F /* View */,
 				2377CE85273FF8FA001483FD /* Assets.xcassets */,
 				2377CE87273FF8FA001483FD /* LaunchScreen.storyboard */,
 				2377CE8A273FF8FA001483FD /* Info.plist */,
+				23DD5053274D81FC00A9863F /* Constans.swift */,
 			);
 			path = "Matematyka dla maturzystów";
+			sourceTree = "<group>";
+		};
+		23B78917274A95F800D5D5C8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23C541C82740621500317775 /* RegisterViewController.swift */,
+				23B78911274A8D7A00D5D5C8 /* MenuViewController.swift */,
+				23B78913274A8EAD00D5D5C8 /* CategoryViewController.swift */,
+				23B78915274A8F0C00D5D5C8 /* TestViewController.swift */,
+				2377CEB2274054C7001483FD /* LoginViewController.swift */,
+				2377CE80273FF8F8001483FD /* MainViewController.swift */,
+				23B78918274A962000D5D5C8 /* ResultViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23DD504F274D664600A9863F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23DD504D274D663A00A9863F /* Question.swift */,
+				23DD5050274D683E00A9863F /* TestBrain.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23DD5052274D7D3900A9863F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2377CE82273FF8F8001483FD /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +189,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2377CE81273FF8F8001483FD /* ViewController.swift in Sources */,
+				2377CEB3274054C7001483FD /* LoginViewController.swift in Sources */,
+				23B78912274A8D7A00D5D5C8 /* MenuViewController.swift in Sources */,
+				23DD5054274D81FC00A9863F /* Constans.swift in Sources */,
+				23B78916274A8F0C00D5D5C8 /* TestViewController.swift in Sources */,
+				23B78914274A8EAD00D5D5C8 /* CategoryViewController.swift in Sources */,
+				23C541C92740621500317775 /* RegisterViewController.swift in Sources */,
+				23DD504E274D663A00A9863F /* Question.swift in Sources */,
+				23DD5051274D683E00A9863F /* TestBrain.swift in Sources */,
+				2377CE81273FF8F8001483FD /* MainViewController.swift in Sources */,
 				2377CE7D273FF8F8001483FD /* AppDelegate.swift in Sources */,
 				2377CE7F273FF8F8001483FD /* SceneDelegate.swift in Sources */,
+				23B78919274A962000D5D5C8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +355,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +367,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +384,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
