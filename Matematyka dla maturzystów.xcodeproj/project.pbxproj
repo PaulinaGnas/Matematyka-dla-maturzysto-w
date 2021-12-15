@@ -14,6 +14,10 @@
 		2377CE86273FF8FA001483FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2377CE85273FF8FA001483FD /* Assets.xcassets */; };
 		2377CE89273FF8FA001483FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2377CE87273FF8FA001483FD /* LaunchScreen.storyboard */; };
 		2377CEB3274054C7001483FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CEB2274054C7001483FD /* LoginViewController.swift */; };
+		239540B2276A5D83004C87DE /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B1276A5D83004C87DE /* Course.swift */; };
+		239540B4276A61A5004C87DE /* CourseBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B3276A61A5004C87DE /* CourseBrain.swift */; };
+		239540B7276A6780004C87DE /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B5276A6780004C87DE /* CourseCell.swift */; };
+		239540B8276A6780004C87DE /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239540B6276A6780004C87DE /* CourseCell.xib */; };
 		23B78912274A8D7A00D5D5C8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78911274A8D7A00D5D5C8 /* MenuViewController.swift */; };
 		23B78914274A8EAD00D5D5C8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78913274A8EAD00D5D5C8 /* CategoryViewController.swift */; };
 		23B78916274A8F0C00D5D5C8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78915274A8F0C00D5D5C8 /* TestViewController.swift */; };
@@ -21,7 +25,7 @@
 		23C541C92740621500317775 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C541C82740621500317775 /* RegisterViewController.swift */; };
 		23DD504E274D663A00A9863F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD504D274D663A00A9863F /* Question.swift */; };
 		23DD5051274D683E00A9863F /* TestBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5050274D683E00A9863F /* TestBrain.swift */; };
-		23DD5054274D81FC00A9863F /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5053274D81FC00A9863F /* Constans.swift */; };
+		23DD5054274D81FC00A9863F /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5053274D81FC00A9863F /* C.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		2377CE88273FF8FA001483FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2377CE8A273FF8FA001483FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2377CEB2274054C7001483FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		239540B1276A5D83004C87DE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		239540B3276A61A5004C87DE /* CourseBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBrain.swift; sourceTree = "<group>"; };
+		239540B5276A6780004C87DE /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		239540B6276A6780004C87DE /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
 		23B78911274A8D7A00D5D5C8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		23B78913274A8EAD00D5D5C8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		23B78915274A8F0C00D5D5C8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +49,7 @@
 		23C541C82740621500317775 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		23DD504D274D663A00A9863F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		23DD5050274D683E00A9863F /* TestBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBrain.swift; sourceTree = "<group>"; };
-		23DD5053274D81FC00A9863F /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		23DD5053274D81FC00A9863F /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,15 +82,17 @@
 		2377CE7B273FF8F8001483FD /* Matematyka dla maturzystów */ = {
 			isa = PBXGroup;
 			children = (
-				23B78917274A95F800D5D5C8 /* Controllers */,
 				2377CE7C273FF8F8001483FD /* AppDelegate.swift */,
-				23DD504F274D664600A9863F /* Models */,
 				2377CE7E273FF8F8001483FD /* SceneDelegate.swift */,
+				23B78917274A95F800D5D5C8 /* Controllers */,
+				23DD504F274D664600A9863F /* Models */,
 				23DD5052274D7D3900A9863F /* View */,
 				2377CE85273FF8FA001483FD /* Assets.xcassets */,
 				2377CE87273FF8FA001483FD /* LaunchScreen.storyboard */,
 				2377CE8A273FF8FA001483FD /* Info.plist */,
-				23DD5053274D81FC00A9863F /* Constans.swift */,
+				23DD5053274D81FC00A9863F /* C.swift */,
+				239540B5276A6780004C87DE /* CourseCell.swift */,
+				239540B6276A6780004C87DE /* CourseCell.xib */,
 			);
 			path = "Matematyka dla maturzystów";
 			sourceTree = "<group>";
@@ -106,6 +116,8 @@
 			children = (
 				23DD504D274D663A00A9863F /* Question.swift */,
 				23DD5050274D683E00A9863F /* TestBrain.swift */,
+				239540B1276A5D83004C87DE /* Course.swift */,
+				239540B3276A61A5004C87DE /* CourseBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239540B8276A6780004C87DE /* CourseCell.xib in Resources */,
 				2377CE89273FF8FA001483FD /* LaunchScreen.storyboard in Resources */,
 				2377CE86273FF8FA001483FD /* Assets.xcassets in Resources */,
 				2377CE84273FF8F8001483FD /* Main.storyboard in Resources */,
@@ -191,12 +204,15 @@
 			files = (
 				2377CEB3274054C7001483FD /* LoginViewController.swift in Sources */,
 				23B78912274A8D7A00D5D5C8 /* MenuViewController.swift in Sources */,
-				23DD5054274D81FC00A9863F /* Constans.swift in Sources */,
+				23DD5054274D81FC00A9863F /* C.swift in Sources */,
 				23B78916274A8F0C00D5D5C8 /* TestViewController.swift in Sources */,
 				23B78914274A8EAD00D5D5C8 /* CategoryViewController.swift in Sources */,
 				23C541C92740621500317775 /* RegisterViewController.swift in Sources */,
 				23DD504E274D663A00A9863F /* Question.swift in Sources */,
+				239540B2276A5D83004C87DE /* Course.swift in Sources */,
 				23DD5051274D683E00A9863F /* TestBrain.swift in Sources */,
+				239540B7276A6780004C87DE /* CourseCell.swift in Sources */,
+				239540B4276A61A5004C87DE /* CourseBrain.swift in Sources */,
 				2377CE81273FF8F8001483FD /* MainViewController.swift in Sources */,
 				2377CE7D273FF8F8001483FD /* AppDelegate.swift in Sources */,
 				2377CE7F273FF8F8001483FD /* SceneDelegate.swift in Sources */,
