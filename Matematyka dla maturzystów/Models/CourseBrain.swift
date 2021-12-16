@@ -9,8 +9,8 @@ import Foundation
 
 struct CourseBrain {
     
-    let courses = [Course(name: "Kurs 1", info: "Opis 1"),
-                   Course(name: "Kurs 2", info: "Opis 2"),
+    let courses = [Course(name: "Funkcja liniowa", info: "Opis 1"),
+                   Course(name: "Funkcja kwadratowa", info: "Opis 2"),
                    Course(name: "Kurs 3", info: "Opis 3"),
                    Course(name: "Kurs 4", info: "Opis 4"),
                    Course(name: "Kurs 5", info: "Opis 5"),

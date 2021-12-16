@@ -9,18 +9,9 @@ import Foundation
 
 struct Question {
     let question: String
-    let aAnswer: String
-    let bAnswer: String
-    let cAnswer: String
-    let dAnswer: String
+    let answerA: String
+    let answerB: String
+    let answerC: String
+    let answerD: String
     let goodAnswer: String
-    
-    init(q: String, a: String, b: String, c: String, d: String, g: String) {
-        question = q
-        aAnswer = a
-        bAnswer = b
-        cAnswer = c
-        dAnswer = d
-        goodAnswer = g
-    }
 }

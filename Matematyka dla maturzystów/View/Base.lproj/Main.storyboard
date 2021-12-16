@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ib-QT-Zx4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lOf-14-vWX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -132,7 +132,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="ii6-Oj-I6g" kind="show" id="CWu-yj-KZf"/>
+                                                    <segue destination="0Ib-QT-Zx4" kind="show" id="dJA-pC-LI0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -179,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4ze-hP-8EB">
-                                <rect key="frame" x="10" y="151.5" width="394" height="700.5"/>
+                                <rect key="frame" x="10" y="195.5" width="394" height="656.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="kix-Gt-DFt">
@@ -193,7 +193,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz interesujący Cię kurs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L0-ML-rJQ">
-                                <rect key="frame" x="15" y="84" width="384" height="27.5"/>
+                                <rect key="frame" x="15" y="128" width="384" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -217,11 +217,37 @@
                     <connections>
                         <outlet property="infoLabel" destination="2L0-ML-rJQ" id="ICA-vX-6BR"/>
                         <outlet property="tableView" destination="4ze-hP-8EB" id="iak-DU-PSX"/>
+                        <segue destination="ii6-Oj-I6g" kind="show" identifier="categorySegue" id="FDc-YP-ncR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Agj-FK-0Pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2671" y="51"/>
+            <point key="canvasLocation" x="2659" y="47"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QMU-Cm-hIS">
+            <objects>
+                <viewController id="Uyd-g2-SIB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxY-5i-pGj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wyklad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDY-Tp-4bB">
+                                <rect key="frame" x="105" y="253" width="213" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VDm-AQ-pnm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BI1-Xb-lIy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGp-fi-20x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833.3333333333335" y="-615.40178571428567"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="2XS-ga-Jzn">
@@ -266,6 +292,10 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Wykłady">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="wykladyButtonPressed:" destination="ii6-Oj-I6g" eventType="touchUpInside" id="iis-gP-Ez1"/>
+                                                    <segue destination="Uyd-g2-SIB" kind="show" id="U0C-0I-wu7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFk-io-TJR">
                                                 <rect key="frame" x="60" y="140" width="294" height="50"/>
@@ -278,6 +308,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Przykłady">
                                                     <fontDescription key="titleFontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="przykladyButtonPressed:" destination="ii6-Oj-I6g" eventType="touchUpInside" id="wAN-sz-mRE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iby-Hr-EN5">
                                                 <rect key="frame" x="60" y="230" width="294" height="50"/>
@@ -294,7 +327,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="4De-Dq-ZgS" kind="show" id="hVF-lx-DFZ"/>
+                                                    <action selector="testButtonPressed:" destination="ii6-Oj-I6g" eventType="touchUpInside" id="4gA-of-hgg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -334,10 +367,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GVh-Ei-GH9"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="fE0-xm-EWd" id="FqQ-Kx-tiy"/>
+                        <segue destination="4De-Dq-ZgS" kind="show" identifier="testSegue" id="Uyz-PR-UaQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjH-dp-sos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3675" y="-308"/>
+            <point key="canvasLocation" x="3749" y="-308"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="BIo-1Q-0OL">
@@ -631,7 +668,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

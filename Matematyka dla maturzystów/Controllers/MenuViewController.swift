@@ -20,6 +20,7 @@ class MenuViewController: UIViewController {
     }
     
     let courseBrain = CourseBrain()
+    var indexNum: Int = 0
 }
 
 extension MenuViewController: UITableViewDataSource {
@@ -38,6 +39,21 @@ extension MenuViewController: UITableViewDataSource {
 
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        indexNum = indexPath.row
+        performSegue(withIdentifier: C.categorySegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == C.categorySegue {}
+        let destinationVC = segue.destination as! CategoryViewController
+        destinationVC.categoryInfo = courseBrain.getInfo(index: indexNum)
+        destinationVC.categoryName = courseBrain.getName(index: indexNum)
     }
 }
+
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //if segue.identifier == C.resultSegue {}
+    //let destinationVC = segue.destination as! ResultViewController
+    //destinationVC.score = score
+  //  destinationVC.questions = testBrain.numberOfQuestions()
+//}
