@@ -20,33 +20,61 @@ class TestViewController: UIViewController {
     let db = Firestore.firestore()
     
     var test: [Question] = []
-    var testBrain = TestBrain()
     
     var questionNumber = 0
+    var score = 0
+    var progress = 0
     var cName: String? // Category Name
-    
-    func nextQuestion() {
-        if  questionNumber + 1 < test.count {
-            questionNumber += 1
-        } else {
-            questionNumber = 0
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = cName
         navigationItem.hidesBackButton = true
-       // print(cName)
         
         loadTest()
-        
-   //     updateUI()
     }
-    var score = 0
     
+    @IBAction func answerButtonPressed(_ sender: UIButton) {
+        
+        //3 4 1 4 2
+        
+        let userAnswer = sender.currentTitle!
+        let a = checkAnswer(userAnswer: userAnswer)
+        
+        if lastQuestion() {
+            performSegue(withIdentifier: C.resultSegue, sender: self)
+            score = 0
+        } else {
+            
+            nextQuestion()
+        }
+        
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+    }
+    
+    func checkAnswer(userAnswer: String) -> Bool {
+        if userAnswer == test[questionNumber].goodAnswer {
+            score += 1
+            return true
+        } else {
+            return false
+        }
+    }
+    func lastQuestion() -> Bool {
+        if questionNumber + 1 == test.count {
+            //  score = 0
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func getProgress() -> Float {
+        return Float(questionNumber) / Float(test.count)
+    }
+
     func loadTest() {
-        db.collection("Funkcja liniowa").getDocuments { (querySnapshot, error) in
+        db.collection(cName!).getDocuments { (querySnapshot, error) in
             if let e = error {
                 print("There was an issue with retrieving data from Firestore. \(e)")
             } else {
@@ -78,51 +106,23 @@ class TestViewController: UIViewController {
         bButton.setTitle(test[questionNumber].answerB, for: .normal)
         cButton.setTitle(test[questionNumber].answerC, for: .normal)
         dButton.setTitle(test[questionNumber].answerD, for: .normal)
+        progressBar.progress = getProgress()
     }
     
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
-        
-        nextQuestion()
-        
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
-        
-        let userAnswer = sender.currentTitle!
-        
-   //     let checkedAnswer = testBrain.checkAnswer(userAnswer: userAnswer)
-   //     score = testBrain.score
-        
-   //     if testBrain.lastQuestion() {
-   //         self.performSegue(withIdentifier: C.resultSegue, sender: self)
-   //     } else {
-   //         testBrain.nextQuestion()
-   //     }
-        
-   //     Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: //#selector(updateUI), userInfo: nil, repeats: false)
-        
+    
+    func nextQuestion() {
+        if questionNumber + 1 < test.count {
+            questionNumber += 1
+        } else {
+            questionNumber = 0
+        }
     }
     
-   // @objc func updateUI() {
-  //      questionLabel.text = testBrain.getQuestionText()
-        
-  //      progressBar.progress = testBrain.getProgress()
-        
-  //      let aAnswer = testBrain.getAAnswersText()
-    //    aButton.setTitle(aAnswer, for: .normal)
-        
-   //     let bAnswer = testBrain.getBAnswersText()
-   //     bButton.setTitle(bAnswer, for: .normal)
-        
-  //      let cAnswer = testBrain.getCAnswersText()
-   //     cButton.setTitle(cAnswer, for: .normal)
-        
- //       let dAnswer = testBrain.getDAnswersText()
- //       dButton.setTitle(dAnswer, for: .normal)
- //   }
-    
- //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  //      if segue.identifier == C.resultSegue {}
-  //      let destinationVC = segue.destination as! ResultViewController
-  //      destinationVC.score = score
-  //      destinationVC.questions = testBrain.numberOfQuestions()
-  //  }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == C.resultSegue {}
+        let destinationVC = segue.destination as! ResultViewController
+        destinationVC.score = score
+        destinationVC.questions = test.count
+        destinationVC.categoryName = cName
+    }
 }

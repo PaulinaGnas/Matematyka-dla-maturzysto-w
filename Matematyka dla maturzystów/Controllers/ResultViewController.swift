@@ -14,10 +14,11 @@ class ResultViewController: UIViewController {
     
     var score: Int?
     var questions: Int?
+    var categoryName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = categoryName
         scoreLabel.text = "Twój wynik to \(score!)/\(questions!)"
     }
     
