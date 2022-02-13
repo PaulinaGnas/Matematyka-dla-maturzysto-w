@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		23261A00276B83E700B62577 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232619FF276B83E700B62577 /* GoogleService-Info.plist */; };
+		232F4C2327A556E400C6D776 /* zad.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 232F4C2227A556E300C6D776 /* zad.pdf */; };
+		232F4C2727A5853B00C6D776 /* Logika.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 232F4C2627A5853B00C6D776 /* Logika.pdf */; };
+		232F4C2927A58A2100C6D776 /* LogikaD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 232F4C2827A58A2100C6D776 /* LogikaD.pdf */; };
 		2377CE7D273FF8F8001483FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CE7C273FF8F8001483FD /* AppDelegate.swift */; };
 		2377CE7F273FF8F8001483FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CE7E273FF8F8001483FD /* SceneDelegate.swift */; };
 		2377CE81273FF8F8001483FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CE80273FF8F8001483FD /* MainViewController.swift */; };
@@ -19,6 +22,7 @@
 		239540B4276A61A5004C87DE /* CourseBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B3276A61A5004C87DE /* CourseBrain.swift */; };
 		239540B7276A6780004C87DE /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B5276A6780004C87DE /* CourseCell.swift */; };
 		239540B8276A6780004C87DE /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239540B6276A6780004C87DE /* CourseCell.xib */; };
+		23959B1A27AEC6BC00D6650E /* pdfy in Resources */ = {isa = PBXBuildFile; fileRef = 23959B1927AEC6BC00D6650E /* pdfy */; };
 		23B78912274A8D7A00D5D5C8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78911274A8D7A00D5D5C8 /* MenuViewController.swift */; };
 		23B78914274A8EAD00D5D5C8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78913274A8EAD00D5D5C8 /* CategoryViewController.swift */; };
 		23B78916274A8F0C00D5D5C8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78915274A8F0C00D5D5C8 /* TestViewController.swift */; };
@@ -27,10 +31,14 @@
 		23DD504E274D663A00A9863F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD504D274D663A00A9863F /* Question.swift */; };
 		23DD5051274D683E00A9863F /* TestBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5050274D683E00A9863F /* TestBrain.swift */; };
 		23DD5054274D81FC00A9863F /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5053274D81FC00A9863F /* C.swift */; };
+		23F65C0927A4467900666479 /* LectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F65C0827A4467900666479 /* LectureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		232619FF276B83E700B62577 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		232F4C2227A556E300C6D776 /* zad.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = zad.pdf; sourceTree = "<group>"; };
+		232F4C2627A5853B00C6D776 /* Logika.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Logika.pdf; sourceTree = "<group>"; };
+		232F4C2827A58A2100C6D776 /* LogikaD.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LogikaD.pdf; sourceTree = "<group>"; };
 		2377CE79273FF8F8001483FD /* Matematyka dla maturzystów.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matematyka dla maturzystów.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2377CE7C273FF8F8001483FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2377CE7E273FF8F8001483FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +52,8 @@
 		239540B3276A61A5004C87DE /* CourseBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBrain.swift; sourceTree = "<group>"; };
 		239540B5276A6780004C87DE /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		239540B6276A6780004C87DE /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
+		23959B1927AEC6BC00D6650E /* pdfy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pdfy; sourceTree = "<group>"; };
+		23959B1B27AEC80D00D6650E /* Logika i zbiory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Logika i zbiory.pdf"; sourceTree = "<group>"; };
 		23B78911274A8D7A00D5D5C8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		23B78913274A8EAD00D5D5C8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		23B78915274A8F0C00D5D5C8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +62,7 @@
 		23DD504D274D663A00A9863F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		23DD5050274D683E00A9863F /* TestBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBrain.swift; sourceTree = "<group>"; };
 		23DD5053274D81FC00A9863F /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
+		23F65C0827A4467900666479 /* LectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureViewController.swift; sourceTree = "<group>"; };
 		7B7171DBDE66192CC7D58926 /* Pods-Matematyka dla maturzystów.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matematyka dla maturzystów.debug.xcconfig"; path = "Target Support Files/Pods-Matematyka dla maturzystów/Pods-Matematyka dla maturzystów.debug.xcconfig"; sourceTree = "<group>"; };
 		8B138D497CCC3FC7B79BE075 /* Pods-Matematyka dla maturzystów.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matematyka dla maturzystów.release.xcconfig"; path = "Target Support Files/Pods-Matematyka dla maturzystów/Pods-Matematyka dla maturzystów.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +99,12 @@
 		2377CE7B273FF8F8001483FD /* Matematyka dla maturzystów */ = {
 			isa = PBXGroup;
 			children = (
+				23959B1927AEC6BC00D6650E /* pdfy */,
+				232F4C2827A58A2100C6D776 /* LogikaD.pdf */,
+				23959B1B27AEC80D00D6650E /* Logika i zbiory.pdf */,
+				232F4C2627A5853B00C6D776 /* Logika.pdf */,
+				232F4C2227A556E300C6D776 /* zad.pdf */,
+				23F65C0527A4325800666479 /* Managejs */,
 				2377CE7C273FF8F8001483FD /* AppDelegate.swift */,
 				2377CE7E273FF8F8001483FD /* SceneDelegate.swift */,
 				23B78917274A95F800D5D5C8 /* Controllers */,
@@ -114,6 +131,7 @@
 				2377CEB2274054C7001483FD /* LoginViewController.swift */,
 				2377CE80273FF8F8001483FD /* MainViewController.swift */,
 				23B78918274A962000D5D5C8 /* ResultViewController.swift */,
+				23F65C0827A4467900666479 /* LectureViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +153,13 @@
 				2377CE82273FF8F8001483FD /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		23F65C0527A4325800666479 /* Managejs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managejs;
 			sourceTree = "<group>";
 		};
 		D0DD03DC64511373E8204722 /* Frameworks */ = {
@@ -213,10 +238,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232F4C2327A556E400C6D776 /* zad.pdf in Resources */,
 				239540B8276A6780004C87DE /* CourseCell.xib in Resources */,
 				2377CE89273FF8FA001483FD /* LaunchScreen.storyboard in Resources */,
 				23261A00276B83E700B62577 /* GoogleService-Info.plist in Resources */,
 				2377CE86273FF8FA001483FD /* Assets.xcassets in Resources */,
+				23959B1A27AEC6BC00D6650E /* pdfy in Resources */,
+				232F4C2727A5853B00C6D776 /* Logika.pdf in Resources */,
+				232F4C2927A58A2100C6D776 /* LogikaD.pdf in Resources */,
 				2377CE84273FF8F8001483FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +308,7 @@
 				23DD504E274D663A00A9863F /* Question.swift in Sources */,
 				239540B2276A5D83004C87DE /* Course.swift in Sources */,
 				23DD5051274D683E00A9863F /* TestBrain.swift in Sources */,
+				23F65C0927A4467900666479 /* LectureViewController.swift in Sources */,
 				239540B7276A6780004C87DE /* CourseCell.swift in Sources */,
 				239540B4276A61A5004C87DE /* CourseBrain.swift in Sources */,
 				2377CE81273FF8F8001483FD /* MainViewController.swift in Sources */,

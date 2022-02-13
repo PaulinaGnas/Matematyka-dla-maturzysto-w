@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController {
     }
     
     @IBAction func wykladyButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: C.lectureSegue, sender: self)
     }
     
     @IBAction func przykladyButtonPressed(_ sender: UIButton) {
@@ -30,8 +31,12 @@ class CategoryViewController: UIViewController {
     var categoryName: String?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == C.testSegue {}
-        let destinationVC = segue.destination as! TestViewController
-        destinationVC.cName = categoryName
+        if segue.identifier == C.testSegue {
+            let destinationVC = segue.destination as! TestViewController
+            destinationVC.cName = categoryName
+        }
+        if segue.identifier == C.lectureSegue {
+            let destinationVC = segue.destination as! LectureViewController
+        }
     }
 }

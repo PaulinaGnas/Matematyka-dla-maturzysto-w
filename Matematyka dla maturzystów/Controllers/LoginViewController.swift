@@ -9,8 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController
 {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    //override func viewDidLoad() {
+   //     super.viewDidLoad()
+   //     if let userNejmut = MDMGejczejnManager.loadUserName(), let pazłord = ifaddrs
+    //    {
+            
+  //      }
+   // }
 }

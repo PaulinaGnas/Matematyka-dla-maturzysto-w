@@ -43,7 +43,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="2Ld-yl-LzT" kind="show" id="YGF-JC-mhS"/>
+                                    <segue destination="qoK-ez-gud" kind="show" id="YGF-JC-mhS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matematyka dla maturzystówążć" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzk-3a-TJX">
@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="-137.27678571428569"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Item-->
         <scene sceneID="4Gz-g1-BOC">
             <objects>
                 <viewController id="2Ld-yl-LzT" customClass="LoginViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,10 +86,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sxU-V1-nd4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3h-02-J1Z" userLabel="TextFields View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="386.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULX-nJ-Qyu">
                                                 <rect key="frame" x="60" y="60" width="294" height="50"/>
@@ -118,7 +118,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0x-pl-WOY" userLabel="Login View">
-                                        <rect key="frame" x="0.0" y="387.5" width="414" height="386.5"/>
+                                        <rect key="frame" x="0.0" y="363" width="414" height="362"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncP-6a-PYo">
                                                 <rect key="frame" x="70" y="70" width="274" height="60"/>
@@ -164,11 +164,12 @@
                             <constraint firstItem="sxU-V1-nd4" firstAttribute="top" secondItem="egq-pT-Yfo" secondAttribute="top" id="WFW-0Q-yhs"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="JVb-bR-cje"/>
                     <navigationItem key="navigationItem" id="eBh-bx-qim"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1h-hI-Zu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.7391304347827" y="-322.09821428571428"/>
+            <point key="canvasLocation" x="2631.8840579710145" y="-322.09821428571428"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="rsS-Aw-daB">
@@ -222,32 +223,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Agj-FK-0Pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2659" y="47"/>
+            <point key="canvasLocation" x="3748" y="-278"/>
         </scene>
-        <!--View Controller-->
+        <!--Lecture View Controller-->
         <scene sceneID="QMU-Cm-hIS">
             <objects>
-                <viewController id="Uyd-g2-SIB" sceneMemberID="viewController">
+                <viewController id="Uyd-g2-SIB" customClass="LectureViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mxY-5i-pGj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wyklad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDY-Tp-4bB">
-                                <rect key="frame" x="105" y="253" width="213" height="454"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-9R-Aw5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VDm-AQ-pnm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VDm-AQ-pnm" firstAttribute="trailing" secondItem="9W1-9R-Aw5" secondAttribute="trailing" id="24f-bD-m0Y"/>
+                            <constraint firstItem="9W1-9R-Aw5" firstAttribute="leading" secondItem="VDm-AQ-pnm" secondAttribute="leading" id="U2J-xr-dPF"/>
+                            <constraint firstItem="9W1-9R-Aw5" firstAttribute="top" secondItem="VDm-AQ-pnm" secondAttribute="top" id="Vw1-z7-8sf"/>
+                            <constraint firstItem="VDm-AQ-pnm" firstAttribute="bottom" secondItem="9W1-9R-Aw5" secondAttribute="bottom" id="eWj-IG-gSB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BI1-Xb-lIy"/>
+                    <connections>
+                        <outlet property="webView" destination="9W1-9R-Aw5" id="lgD-ZU-Ls3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGp-fi-20x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833.3333333333335" y="-615.40178571428567"/>
+            <point key="canvasLocation" x="4658" y="405"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="2XS-ga-Jzn">
@@ -293,8 +304,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="wykladyButtonPressed:" destination="ii6-Oj-I6g" eventType="touchUpInside" id="iis-gP-Ez1"/>
-                                                    <segue destination="Uyd-g2-SIB" kind="show" id="U0C-0I-wu7"/>
+                                                    <segue destination="Uyd-g2-SIB" kind="show" identifier="lectureSegue" id="U0C-0I-wu7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFk-io-TJR">
@@ -374,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjH-dp-sos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3749" y="-308"/>
+            <point key="canvasLocation" x="4657.971014492754" y="-308.03571428571428"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="BIo-1Q-0OL">
@@ -499,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGT-GH-NGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4535" y="-308"/>
+            <point key="canvasLocation" x="5444.9275362318849" y="-308.03571428571428"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="eJu-rA-fgd">
@@ -566,7 +576,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvd-hD-WOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5374" y="-308"/>
+            <point key="canvasLocation" x="6284.057971014493" y="-308.03571428571428"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="uxy-60-E9j">
@@ -682,6 +692,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyB-qc-txa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-152.17391304347828" y="-137.27678571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="etj-B1-Dmg">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qoK-ez-gud" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VrJ-kn-tLV"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vEw-8J-yyb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2Ld-yl-LzT" kind="relationship" relationship="viewControllers" id="Hjn-ET-aCr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svy-jP-dgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="-322.09821428571428"/>
         </scene>
     </scenes>
     <resources>
