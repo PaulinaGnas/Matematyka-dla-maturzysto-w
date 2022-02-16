@@ -26,7 +26,7 @@ class LectureViewController: UIViewController
         return nil
     }
     func displayWebView() {
-        if let resourceUrl = self.resourceUrl(forFileName: "Logika i zbiory") {
+        if let resourceUrl = self.resourceUrl(forFileName: "pdfy/Trygonometria") {
             webView.loadFileURL(resourceUrl, allowingReadAccessTo: resourceUrl)
         }
     }
