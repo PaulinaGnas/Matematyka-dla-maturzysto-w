@@ -232,33 +232,14 @@
                     <view key="view" contentMode="scaleToFill" id="mxY-5i-pGj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-9R-Aw5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VDm-AQ-pnm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="VDm-AQ-pnm" firstAttribute="trailing" secondItem="9W1-9R-Aw5" secondAttribute="trailing" id="24f-bD-m0Y"/>
-                            <constraint firstItem="9W1-9R-Aw5" firstAttribute="leading" secondItem="VDm-AQ-pnm" secondAttribute="leading" id="U2J-xr-dPF"/>
-                            <constraint firstItem="9W1-9R-Aw5" firstAttribute="top" secondItem="VDm-AQ-pnm" secondAttribute="top" id="Vw1-z7-8sf"/>
-                            <constraint firstItem="VDm-AQ-pnm" firstAttribute="bottom" secondItem="9W1-9R-Aw5" secondAttribute="bottom" id="eWj-IG-gSB"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BI1-Xb-lIy"/>
-                    <connections>
-                        <outlet property="webView" destination="9W1-9R-Aw5" id="lgD-ZU-Ls3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGp-fi-20x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4658" y="405"/>
+            <point key="canvasLocation" x="4183" y="404"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="2XS-ga-Jzn">
@@ -320,6 +301,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="przykladyButtonPressed:" destination="ii6-Oj-I6g" eventType="touchUpInside" id="wAN-sz-mRE"/>
+                                                    <segue destination="dju-fh-B1R" kind="show" id="XHF-Xg-6CR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iby-Hr-EN5">
@@ -667,6 +649,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kR-0P-hks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742" y="382"/>
+        </scene>
+        <!--Example View Controller-->
+        <scene sceneID="uzU-kU-LNP">
+            <objects>
+                <viewController id="dju-fh-B1R" customClass="ExampleViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cx9-mU-AYn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uwr-je-X1l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zpL-wu-q0f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYq-MP-aSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5048" y="404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bwp-tz-Gce">
