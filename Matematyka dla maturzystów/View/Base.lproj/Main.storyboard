@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lOf-14-vWX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ii6-Oj-I6g">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MDMMainViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Item-->
         <scene sceneID="4Gz-g1-BOC">
             <objects>
-                <viewController id="2Ld-yl-LzT" customClass="LoginViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Ld-yl-LzT" customClass="MDMLoginViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ISx-II-3n1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
         <!--Menu View Controller-->
         <scene sceneID="rsS-Aw-daB">
             <objects>
-                <viewController id="0Ib-QT-Zx4" customClass="MenuViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Ib-QT-Zx4" customClass="MDMMenuViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xp9-Ef-2r7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,7 +228,7 @@
         <!--Lecture View Controller-->
         <scene sceneID="QMU-Cm-hIS">
             <objects>
-                <viewController id="Uyd-g2-SIB" customClass="LectureViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uyd-g2-SIB" customClass="MDMLectureViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mxY-5i-pGj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +244,7 @@
         <!--Category View Controller-->
         <scene sceneID="2XS-ga-Jzn">
             <objects>
-                <viewController id="ii6-Oj-I6g" customClass="CategoryViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ii6-Oj-I6g" customClass="MDMCategoryViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zG9-Yh-m3K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,6 +320,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="testButtonPressed:" destination="ii6-Oj-I6g" eventType="touchUpInside" id="4gA-of-hgg"/>
+                                                    <segue destination="hJF-Bp-8ub" kind="show" identifier="testSegue" id="Fo2-iw-8bI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -361,7 +362,6 @@
                     <navigationItem key="navigationItem" id="GVh-Ei-GH9"/>
                     <connections>
                         <outlet property="categoryLabel" destination="fE0-xm-EWd" id="FqQ-Kx-tiy"/>
-                        <segue destination="4De-Dq-ZgS" kind="show" identifier="testSegue" id="Uyz-PR-UaQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjH-dp-sos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -369,134 +369,41 @@
             <point key="canvasLocation" x="4657.971014492754" y="-308.03571428571428"/>
         </scene>
         <!--Test View Controller-->
-        <scene sceneID="BIo-1Q-0OL">
+        <scene sceneID="5wt-dw-abR">
             <objects>
-                <viewController id="4De-Dq-ZgS" customClass="TestViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g3t-hn-dhA">
+                <viewController id="hJF-Bp-8ub" customClass="MDMTestViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zAx-nn-5CF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jd5-nx-M69">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gea-gO-xG1">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zadanie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1d-zM-Vy4">
-                                        <rect key="frame" x="15" y="0.0" width="384" height="514"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMw-fe-AdL">
-                                        <rect key="frame" x="57" y="524" width="300" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="TBh-Ke-1Xw"/>
-                                            <constraint firstAttribute="height" constant="50" id="Uum-IQ-oMI"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="odpowiedź A" cornerStyle="capsule">
-                                            <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="2">
-                                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="strokeColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="answerButtonPressed:" destination="4De-Dq-ZgS" eventType="touchUpInside" id="1qk-6u-Jy8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL0-z7-GNA">
-                                        <rect key="frame" x="57" y="584" width="300" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="VtL-yN-v5y"/>
-                                            <constraint firstAttribute="height" constant="50" id="wRy-R1-oPn"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="odpowiedź B">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="answerButtonPressed:" destination="4De-Dq-ZgS" eventType="touchUpInside" id="9cW-is-y38"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-lu-2fe">
-                                        <rect key="frame" x="57" y="644" width="300" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Wz6-8u-hGy"/>
-                                            <constraint firstAttribute="width" constant="300" id="qLw-Fb-taI"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="odpowiedź C">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="answerButtonPressed:" destination="4De-Dq-ZgS" eventType="touchUpInside" id="cdr-mR-Dlk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-Bf-yeq">
-                                        <rect key="frame" x="57" y="704" width="300" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="Xdb-F9-Zmd"/>
-                                            <constraint firstAttribute="height" constant="50" id="d6Y-T9-Ygo"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="odpowiedź D">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="answerButtonPressed:" destination="4De-Dq-ZgS" eventType="touchUpInside" id="BFf-2N-2Qs"/>
-                                        </connections>
-                                    </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eSm-uV-XmQ">
-                                        <rect key="frame" x="50" y="764" width="314" height="10"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="10" id="rnT-iX-HKh"/>
-                                        </constraints>
-                                    </progressView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="o1d-zM-Vy4" firstAttribute="top" secondItem="Jd5-nx-M69" secondAttribute="top" id="PlZ-sR-Q6y"/>
-                                    <constraint firstItem="o1d-zM-Vy4" firstAttribute="leading" secondItem="Jd5-nx-M69" secondAttribute="leading" constant="15" id="Xlt-A7-IVD"/>
-                                    <constraint firstItem="pMw-fe-AdL" firstAttribute="top" secondItem="o1d-zM-Vy4" secondAttribute="bottom" constant="10" id="e7c-eV-z2m"/>
-                                    <constraint firstAttribute="trailing" secondItem="eSm-uV-XmQ" secondAttribute="trailing" constant="50" id="jMj-Kk-hiE"/>
-                                    <constraint firstAttribute="trailing" secondItem="o1d-zM-Vy4" secondAttribute="trailing" constant="15" id="nUT-43-sA6"/>
-                                    <constraint firstItem="eSm-uV-XmQ" firstAttribute="leading" secondItem="Jd5-nx-M69" secondAttribute="leading" constant="50" id="z0g-QE-nUc"/>
-                                </constraints>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="NNJ-au-4De"/>
+                        <viewLayoutGuide key="safeArea" id="kJc-Jc-s0p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jd5-nx-M69" firstAttribute="top" secondItem="NNJ-au-4De" secondAttribute="top" id="20N-5Y-Sfa"/>
-                            <constraint firstItem="Jd5-nx-M69" firstAttribute="leading" secondItem="NNJ-au-4De" secondAttribute="leading" id="btO-AA-xmW"/>
-                            <constraint firstItem="NNJ-au-4De" firstAttribute="bottom" secondItem="Jd5-nx-M69" secondAttribute="bottom" id="nqY-Vl-8Wo"/>
-                            <constraint firstItem="NNJ-au-4De" firstAttribute="trailing" secondItem="Jd5-nx-M69" secondAttribute="trailing" id="ocw-zc-Biy"/>
+                            <constraint firstItem="gea-gO-xG1" firstAttribute="top" secondItem="kJc-Jc-s0p" secondAttribute="top" id="Ajp-Vp-LP9"/>
+                            <constraint firstItem="kJc-Jc-s0p" firstAttribute="trailing" secondItem="gea-gO-xG1" secondAttribute="trailing" id="eOV-BV-6s1"/>
+                            <constraint firstItem="kJc-Jc-s0p" firstAttribute="bottom" secondItem="gea-gO-xG1" secondAttribute="bottom" id="mea-ie-ZPG"/>
+                            <constraint firstItem="gea-gO-xG1" firstAttribute="leading" secondItem="kJc-Jc-s0p" secondAttribute="leading" id="oez-7G-Yj5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uhc-H6-AeL"/>
+                    <navigationItem key="navigationItem" id="LGZ-ev-u1d"/>
                     <connections>
-                        <outlet property="aButton" destination="pMw-fe-AdL" id="QKZ-6X-RGM"/>
-                        <outlet property="bButton" destination="GL0-z7-GNA" id="60N-6d-IoG"/>
-                        <outlet property="cButton" destination="xpL-lu-2fe" id="bfl-Ml-itg"/>
-                        <outlet property="dButton" destination="b0B-Bf-yeq" id="SzQ-b6-zOk"/>
-                        <outlet property="progressBar" destination="eSm-uV-XmQ" id="BcX-R6-6RC"/>
-                        <outlet property="questionLabel" destination="o1d-zM-Vy4" id="PZc-S3-ajm"/>
-                        <segue destination="irL-Ks-6xR" kind="show" identifier="resultSeque" id="gFz-rW-Iu2"/>
+                        <outlet property="tempView" destination="gea-gO-xG1" id="dqg-rn-3jG"/>
+                        <segue destination="irL-Ks-6xR" kind="show" identifier="resultSeque" id="jui-qa-h1m"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JGT-GH-NGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGN-KN-oJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5444.9275362318849" y="-308.03571428571428"/>
+            <point key="canvasLocation" x="5506" y="-322"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="eJu-rA-fgd">
             <objects>
-                <viewController id="irL-Ks-6xR" customClass="ResultViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="irL-Ks-6xR" customClass="MDMResultViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c5b-XE-5RC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -558,12 +465,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvd-hD-WOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6284.057971014493" y="-308.03571428571428"/>
+            <point key="canvasLocation" x="6317" y="-330"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="uxy-60-E9j">
             <objects>
-                <viewController id="8hA-Zv-aLK" customClass="RegisterViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8hA-Zv-aLK" customClass="MDMRegisterViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="km2-2y-9t2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -653,7 +560,7 @@
         <!--Example View Controller-->
         <scene sceneID="uzU-kU-LNP">
             <objects>
-                <viewController id="dju-fh-B1R" customClass="ExampleViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dju-fh-B1R" customClass="MDMExampleViewController" customModule="Matematyka_dla_maturzysto_w" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cx9-mU-AYn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

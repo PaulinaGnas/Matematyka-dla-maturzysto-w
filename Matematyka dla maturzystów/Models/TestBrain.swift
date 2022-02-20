@@ -37,7 +37,7 @@ class TestBrain {
     
     
 //    var questionNumber = 0
-    var test: [Question] = []
+//    var test: [Question] = []
     
 //    func getQuestionText() -> String {
 //        return test[questionNumber].question

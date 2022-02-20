@@ -21,11 +21,10 @@ class FirebaseBrain {
         
         pathReference.downloadURL { url, error in
             if let error  = error {
-                print(" \(error)")
+                print("Błąd w pobieraniu danych z Firebase \(error)")
                 fishished()
             } else {
                 self.myUrl = url
-                print("zzzzzzzzzzzzzzz \(url!)")
                 fishished()
             }
         }
