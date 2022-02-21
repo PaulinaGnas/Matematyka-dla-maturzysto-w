@@ -17,6 +17,11 @@ struct C {
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "CourseCell"
     
+    struct Category {
+        static let categories = "kategorie"
+        static let cInfo = "opis"
+    }
+    
     struct Test {
         static let answer = "odp"
         static let fileName = "plik"
