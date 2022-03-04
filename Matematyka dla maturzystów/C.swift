@@ -13,13 +13,32 @@ struct C {
     static let testSegue = "testSegue"
     static let lectureSegue = "lectureSegue"
     static let categorySegue = "categorySegue"
+    static let exampleIdentifier = "exampleIdentifier"
+    
+    static let logToMenuSegue = "LogToMenuSegue"
+    static let regToMenuSegue = "regToMenuSegue"
+    
+    static let menuToProfileSegue = "menuToProfileSegue"
     
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "CourseCell"
     
+    static let pCellNibName = "ProfileCellTableViewCell"
+    static let pCellIdentifier = "ProfileReusableCell"
+    
+    static let usersScores = "usersScores"
+    
     struct Category {
         static let categories = "kategorie"
-        static let cInfo = "opis"
+        static let courseInfo = "opis"
+        static let lecturePath = "nazwaWykladu"
+        static let examplePath = "nazwaPrzykladow"
+    }
+    
+    struct FirebaseScore {
+        static let firebaseScore = "wynik"
+        static let firebaseQuestions = "liczba pytań"
+        static let firebasePCT = "wynik w procentach"
     }
     
     struct Test {

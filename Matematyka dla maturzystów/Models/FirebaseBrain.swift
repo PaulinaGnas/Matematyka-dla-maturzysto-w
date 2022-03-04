@@ -14,10 +14,9 @@ class FirebaseBrain {
     let storage = Storage.storage()
     var myUrl: URL?
     
-    
     func downloadLecture(myName: String, fishished: @escaping () -> Void) {
         
-        let pathReference = storage.reference(withPath: "\(myName).pdf")
+        let pathReference = storage.reference(withPath: myName)
         
         pathReference.downloadURL { url, error in
             if let error  = error {

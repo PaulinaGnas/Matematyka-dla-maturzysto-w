@@ -16,17 +16,18 @@
 		2377CE89273FF8FA001483FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2377CE87273FF8FA001483FD /* LaunchScreen.storyboard */; };
 		2377CEB3274054C7001483FD /* MDMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377CEB2274054C7001483FD /* MDMLoginViewController.swift */; };
 		239540B2276A5D83004C87DE /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B1276A5D83004C87DE /* Course.swift */; };
-		239540B4276A61A5004C87DE /* CourseBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B3276A61A5004C87DE /* CourseBrain.swift */; };
 		239540B7276A6780004C87DE /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239540B5276A6780004C87DE /* CourseCell.swift */; };
 		239540B8276A6780004C87DE /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239540B6276A6780004C87DE /* CourseCell.xib */; };
-		23959B1A27AEC6BC00D6650E /* pdfy in Resources */ = {isa = PBXBuildFile; fileRef = 23959B1927AEC6BC00D6650E /* pdfy */; };
 		23B78912274A8D7A00D5D5C8 /* MDMMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78911274A8D7A00D5D5C8 /* MDMMenuViewController.swift */; };
 		23B78914274A8EAD00D5D5C8 /* MDMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78913274A8EAD00D5D5C8 /* MDMCategoryViewController.swift */; };
 		23B78919274A962000D5D5C8 /* MDMResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B78918274A962000D5D5C8 /* MDMResultViewController.swift */; };
 		23C541C92740621500317775 /* MDMRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C541C82740621500317775 /* MDMRegisterViewController.swift */; };
-		23DD5051274D683E00A9863F /* TestBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD5050274D683E00A9863F /* TestBrain.swift */; };
 		23F65C0927A4467900666479 /* MDMLectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F65C0827A4467900666479 /* MDMLectureViewController.swift */; };
 		3523639C27BEAF3100DEDD4D /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523639B27BEAF3000DEDD4D /* C.swift */; };
+		3551872E27CD5B9200A10347 /* MDMProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551872D27CD5B9200A10347 /* MDMProfileViewController.swift */; };
+		3551877327D01F1800A10347 /* ProfileCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551877127D01F1800A10347 /* ProfileCellTableViewCell.swift */; };
+		3551877427D01F1800A10347 /* ProfileCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3551877227D01F1800A10347 /* ProfileCellTableViewCell.xib */; };
+		3551877A27D0D94D00A10347 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551877927D0D94D00A10347 /* Profile.swift */; };
 		3568EAA027BED79A0040A718 /* MDMExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568EA9F27BED79A0040A718 /* MDMExampleViewController.swift */; };
 		3568EAA227BED8080040A718 /* FirebaseBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568EAA127BED8080040A718 /* FirebaseBrain.swift */; };
 		357E830C27C03C2600E07045 /* MDMTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E830B27C03C2600E07045 /* MDMTestViewController.swift */; };
@@ -45,23 +46,24 @@
 		2377CE8A273FF8FA001483FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2377CEB2274054C7001483FD /* MDMLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMLoginViewController.swift; sourceTree = "<group>"; };
 		239540B1276A5D83004C87DE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
-		239540B3276A61A5004C87DE /* CourseBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBrain.swift; sourceTree = "<group>"; };
 		239540B5276A6780004C87DE /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		239540B6276A6780004C87DE /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
-		23959B1927AEC6BC00D6650E /* pdfy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pdfy; sourceTree = "<group>"; };
 		23B78911274A8D7A00D5D5C8 /* MDMMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMMenuViewController.swift; sourceTree = "<group>"; };
 		23B78913274A8EAD00D5D5C8 /* MDMCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMCategoryViewController.swift; sourceTree = "<group>"; };
 		23B78918274A962000D5D5C8 /* MDMResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMResultViewController.swift; sourceTree = "<group>"; };
 		23C541C82740621500317775 /* MDMRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMRegisterViewController.swift; sourceTree = "<group>"; };
-		23DD5050274D683E00A9863F /* TestBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBrain.swift; sourceTree = "<group>"; };
 		23F65C0827A4467900666479 /* MDMLectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMLectureViewController.swift; sourceTree = "<group>"; };
 		3523639B27BEAF3000DEDD4D /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
+		3551872D27CD5B9200A10347 /* MDMProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMProfileViewController.swift; sourceTree = "<group>"; };
+		3551877127D01F1800A10347 /* ProfileCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellTableViewCell.swift; sourceTree = "<group>"; };
+		3551877227D01F1800A10347 /* ProfileCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCellTableViewCell.xib; sourceTree = "<group>"; };
+		3551877927D0D94D00A10347 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3568EA9F27BED79A0040A718 /* MDMExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMExampleViewController.swift; sourceTree = "<group>"; };
 		3568EAA127BED8080040A718 /* FirebaseBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBrain.swift; sourceTree = "<group>"; };
 		357E830B27C03C2600E07045 /* MDMTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMTestViewController.swift; sourceTree = "<group>"; };
 		357E830D27C13E3700E07045 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		84114F9937407FBAD8F6F0FD /* Pods-Matematyka dla maturzystów.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matematyka dla maturzystów.release.xcconfig"; path = "Target Support Files/Pods-Matematyka dla maturzystów/Pods-Matematyka dla maturzystów.release.xcconfig"; sourceTree = "<group>"; };
-		C923AA7FB58BFFC0116B76AC /* Pods-Matematyka dla maturzystów.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matematyka dla maturzystów.debug.xcconfig"; path = "Target Support Files/Pods-Matematyka dla maturzystów/Pods-Matematyka dla maturzystów.debug.xcconfig"; sourceTree = "<group>"; };
+		56293EDE3561FBE62AF176DD /* Pods-Matematyka dla maturzystów.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matematyka dla maturzystów.release.xcconfig"; path = "Target Support Files/Pods-Matematyka dla maturzystów/Pods-Matematyka dla maturzystów.release.xcconfig"; sourceTree = "<group>"; };
+		C1A93836BE298D168C341E1E /* Pods-Matematyka dla maturzystów.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matematyka dla maturzystów.debug.xcconfig"; path = "Target Support Files/Pods-Matematyka dla maturzystów/Pods-Matematyka dla maturzystów.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,6 @@
 		2377CE7B273FF8F8001483FD /* Matematyka dla maturzystów */ = {
 			isa = PBXGroup;
 			children = (
-				23959B1927AEC6BC00D6650E /* pdfy */,
 				2377CE7C273FF8F8001483FD /* AppDelegate.swift */,
 				2377CE7E273FF8F8001483FD /* SceneDelegate.swift */,
 				23B78917274A95F800D5D5C8 /* Controllers */,
@@ -106,8 +107,6 @@
 				2377CE87273FF8FA001483FD /* LaunchScreen.storyboard */,
 				2377CE8A273FF8FA001483FD /* Info.plist */,
 				232619FF276B83E700B62577 /* GoogleService-Info.plist */,
-				239540B5276A6780004C87DE /* CourseCell.swift */,
-				239540B6276A6780004C87DE /* CourseCell.xib */,
 			);
 			path = "Matematyka dla maturzystów";
 			sourceTree = "<group>";
@@ -124,6 +123,9 @@
 				23F65C0827A4467900666479 /* MDMLectureViewController.swift */,
 				3568EA9F27BED79A0040A718 /* MDMExampleViewController.swift */,
 				357E830B27C03C2600E07045 /* MDMTestViewController.swift */,
+				3551872D27CD5B9200A10347 /* MDMProfileViewController.swift */,
+				3551877127D01F1800A10347 /* ProfileCellTableViewCell.swift */,
+				3551877227D01F1800A10347 /* ProfileCellTableViewCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,10 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				357E830D27C13E3700E07045 /* Exercise.swift */,
-				23DD5050274D683E00A9863F /* TestBrain.swift */,
+				3551877927D0D94D00A10347 /* Profile.swift */,
 				239540B1276A5D83004C87DE /* Course.swift */,
-				239540B3276A61A5004C87DE /* CourseBrain.swift */,
 				3568EAA127BED8080040A718 /* FirebaseBrain.swift */,
+				239540B5276A6780004C87DE /* CourseCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				2377CE82273FF8F8001483FD /* Main.storyboard */,
+				239540B6276A6780004C87DE /* CourseCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,8 +154,8 @@
 		4BF4290665503B524886CD99 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C923AA7FB58BFFC0116B76AC /* Pods-Matematyka dla maturzystów.debug.xcconfig */,
-				84114F9937407FBAD8F6F0FD /* Pods-Matematyka dla maturzystów.release.xcconfig */,
+				C1A93836BE298D168C341E1E /* Pods-Matematyka dla maturzystów.debug.xcconfig */,
+				56293EDE3561FBE62AF176DD /* Pods-Matematyka dla maturzystów.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -164,11 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2377CE8D273FF8FA001483FD /* Build configuration list for PBXNativeTarget "Matematyka dla maturzystów" */;
 			buildPhases = (
-				2D888FB0DEE97A231938B7FA /* [CP] Check Pods Manifest.lock */,
+				35ECC20CCED36AFC4D078428 /* [CP] Check Pods Manifest.lock */,
 				2377CE75273FF8F8001483FD /* Sources */,
 				2377CE76273FF8F8001483FD /* Frameworks */,
 				2377CE77273FF8F8001483FD /* Resources */,
-				3EEC525618042757617F4F93 /* [CP] Copy Pods Resources */,
+				8117A58B8DCD59CA84563935 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,10 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				239540B8276A6780004C87DE /* CourseCell.xib in Resources */,
+				3551877427D01F1800A10347 /* ProfileCellTableViewCell.xib in Resources */,
 				2377CE89273FF8FA001483FD /* LaunchScreen.storyboard in Resources */,
 				23261A00276B83E700B62577 /* GoogleService-Info.plist in Resources */,
 				2377CE86273FF8FA001483FD /* Assets.xcassets in Resources */,
-				23959B1A27AEC6BC00D6650E /* pdfy in Resources */,
 				2377CE84273FF8F8001483FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,7 +232,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D888FB0DEE97A231938B7FA /* [CP] Check Pods Manifest.lock */ = {
+		35ECC20CCED36AFC4D078428 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,7 +254,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3EEC525618042757617F4F93 /* [CP] Copy Pods Resources */ = {
+		8117A58B8DCD59CA84563935 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,14 +286,15 @@
 				23C541C92740621500317775 /* MDMRegisterViewController.swift in Sources */,
 				3523639C27BEAF3100DEDD4D /* C.swift in Sources */,
 				239540B2276A5D83004C87DE /* Course.swift in Sources */,
-				23DD5051274D683E00A9863F /* TestBrain.swift in Sources */,
 				23F65C0927A4467900666479 /* MDMLectureViewController.swift in Sources */,
+				3551877327D01F1800A10347 /* ProfileCellTableViewCell.swift in Sources */,
 				239540B7276A6780004C87DE /* CourseCell.swift in Sources */,
-				239540B4276A61A5004C87DE /* CourseBrain.swift in Sources */,
 				2377CE81273FF8F8001483FD /* MDMMainViewController.swift in Sources */,
 				3568EAA027BED79A0040A718 /* MDMExampleViewController.swift in Sources */,
+				3551872E27CD5B9200A10347 /* MDMProfileViewController.swift in Sources */,
 				2377CE7D273FF8F8001483FD /* AppDelegate.swift in Sources */,
 				3568EAA227BED8080040A718 /* FirebaseBrain.swift in Sources */,
+				3551877A27D0D94D00A10347 /* Profile.swift in Sources */,
 				2377CE7F273FF8F8001483FD /* SceneDelegate.swift in Sources */,
 				23B78919274A962000D5D5C8 /* MDMResultViewController.swift in Sources */,
 			);
@@ -436,7 +440,7 @@
 		};
 		2377CE8E273FF8FA001483FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C923AA7FB58BFFC0116B76AC /* Pods-Matematyka dla maturzystów.debug.xcconfig */;
+			baseConfigurationReference = C1A93836BE298D168C341E1E /* Pods-Matematyka dla maturzystów.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,7 +470,7 @@
 		};
 		2377CE8F273FF8FA001483FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84114F9937407FBAD8F6F0FD /* Pods-Matematyka dla maturzystów.release.xcconfig */;
+			baseConfigurationReference = 56293EDE3561FBE62AF176DD /* Pods-Matematyka dla maturzystów.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

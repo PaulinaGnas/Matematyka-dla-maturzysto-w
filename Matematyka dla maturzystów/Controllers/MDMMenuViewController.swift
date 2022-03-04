@@ -10,25 +10,38 @@ import Firebase
 
 class MDMMenuViewController: UIViewController {
     
-    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let db = Firestore.firestore()
+    @IBAction func profileButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: C.menuToProfileSegue, sender: self)
+    }
     
+    let db = Firestore.firestore()
     var allCourses: [String] = []
     var courseDescriptions: [Course] = []
+    let user = Auth.auth().currentUser?.email
+    var indexNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        navigationItem.title = "Dostępne kursy"
+        
         loadTest()
         tableView.dataSource = self
         tableView.register(UINib(nibName: C.cellNibName, bundle: nil), forCellReuseIdentifier: C.cellIdentifier)
         tableView.delegate = self
     }
     
-    let courseBrain = CourseBrain()
-    var indexNum: Int = 0
-    
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+            
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    }
     
     func loadTest() {
         db.collection(C.Category.categories).getDocuments { (querySnapshot, error) in
@@ -39,9 +52,11 @@ class MDMMenuViewController: UIViewController {
                     for doc in snapshotDocuments {
                         self.allCourses.append(doc.documentID)
                         let data = doc.data()
-                        if let des = data[C.Category.cInfo] as? String {
+                        if let des = data[C.Category.courseInfo] as? String,
+                           let lName = data[C.Category.lecturePath] as? String,
+                           let eName = data[C.Category.examplePath] as? String {
                             
-                            let cInfo = Course(name: doc.documentID, info: des)
+                            let cInfo = Course(name: doc.documentID, info: des, lectureName: lName, exampleName: eName)
                             self.courseDescriptions.append(cInfo)
                         }
                         DispatchQueue.main.async {
@@ -51,7 +66,6 @@ class MDMMenuViewController: UIViewController {
                 }
             }
         }
-
     }
 }
 
@@ -65,7 +79,7 @@ extension MDMMenuViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: C.cellIdentifier, for: indexPath) as! CourseCell
         
         cell.courseLabel.text = allCourses[indexPath.row]
-
+        
         return cell
     }
 }
@@ -77,10 +91,17 @@ extension MDMMenuViewController: UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == C.categorySegue {}
-        let destinationVC = segue.destination as! MDMCategoryViewController
-        destinationVC.courseDescription = courseDescriptions[indexNum].info
-        destinationVC.categoryName = courseDescriptions[indexNum].name
+        if segue.identifier == C.categorySegue {
+            let destinationVC = segue.destination as! MDMCategoryViewController
+            destinationVC.courseDescription = courseDescriptions[indexNum].info
+            destinationVC.categoryName = courseDescriptions[indexNum].name
+            destinationVC.lectureName = courseDescriptions[indexNum].lectureName
+            destinationVC.exampleName = courseDescriptions[indexNum].exampleName
+        } else if segue.identifier == C.menuToProfileSegue {
+            let destinationVC = segue.destination as! MDMProfileViewController
+            destinationVC.userName = user
+            destinationVC.allCourses = allCourses
+        }
     }
 }
 

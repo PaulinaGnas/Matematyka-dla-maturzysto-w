@@ -11,4 +11,6 @@ struct Course {
     
     let name: String
     let info: String
+    let lectureName: String
+    let exampleName: String
 }

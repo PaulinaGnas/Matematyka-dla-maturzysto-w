@@ -15,23 +15,36 @@ class MDMTestViewController: UIViewController {
     
     let db = Firestore.firestore()
     var test: [Exercise] = []
-//    var numerOdpowiedzi: Int?
     var questionNumber = 0
-    
     var score = 0
-    
     var progress = 0.0
-    
-//    var progressBar = UIProgressView()
-    
+    var courseName: String?
     let storage = Storage.storage()
     var myUrl: URL?
+    var tries: Int?
+    let userName = Auth.auth().currentUser?.email
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        getNumberOfTries()
         loadTest()
     }
+    
+    func getNumberOfTries() {
+            if userName != nil {
+                db.collection(C.usersScores).document(userName!).collection(courseName!).getDocuments { (querySnapshot, error) in
+                    if let e = error {
+                        print("There was an issue with retrieving data from Firestore. \(e)")
+                    } else {
+                        if let snapshotDocuments = querySnapshot?.documents {
+                            self.tries = snapshotDocuments.count + 1
+                        }
+                    }
+                }
+            }
+        }
     
     private func createWebView(withFrame frame: CGRect) -> WKWebView? {
         let webView = WKWebView(frame: frame)
@@ -60,15 +73,10 @@ class MDMTestViewController: UIViewController {
     private func displayWebView() {
         if let webView = self.createWebView(withFrame: self.view.bounds) {
             self.view.addSubview(tempView)
-//            self.view.backgroundColor = .blue
-            
-//            tempView.backgroundColor = .green
             tempView.addSubview(webView)
             
             webView.frame = tempView.bounds
             webView.underPageBackgroundColor = .white
-            
-            
             
             webView.addSubview(progressView)
             progressView.frame = CGRect(x: 60, y: 40, width: 300, height: 55)
@@ -100,11 +108,12 @@ class MDMTestViewController: UIViewController {
     
     
     func createButton(bx: CGFloat, by: CGFloat, bw: CGFloat, bh: CGFloat) -> UIButton? {
+        
         let multiplier = 838 / (self.view.bounds.size.width - 16)
         
         let webButton = UIButton(frame: CGRect(x: bx/multiplier, y: by/multiplier, width: bw/multiplier, height: bh/multiplier))
         
-        webButton.backgroundColor = .blue
+        webButton.backgroundColor = UIColor.clear
         
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(didTapAnswerButton(sender:)))
         
@@ -117,13 +126,10 @@ class MDMTestViewController: UIViewController {
     @IBAction func didTapAnswerButton(sender: UITapGestureRecognizer) {
         
         let userAnswer = sender.view?.tag
-        print(userAnswer!)
         
         checkAnswer(userAnswer: userAnswer!, goodAnswer: test[questionNumber].goodAnswer)
         
         if lastQuestion() {
-//            print("KONIEC TESTU")
-            print("WYNIK: \(score)")
             performSegue(withIdentifier: C.resultSegue, sender: self)
             questionNumber = 0
             score = 0
@@ -131,7 +137,6 @@ class MDMTestViewController: UIViewController {
         } else {
             nextQuestion()
         }
-        
         let t = test[questionNumber].fileName
         updateUI(file: t)
     }
@@ -142,8 +147,6 @@ class MDMTestViewController: UIViewController {
             score += 1
         }
     }
-    
-    
     func nextQuestion() {
         if questionNumber + 1 < test.count {
             questionNumber += 1
@@ -151,8 +154,6 @@ class MDMTestViewController: UIViewController {
             questionNumber = 0
         }
     }
-    
-    
     func lastQuestion() -> Bool {
         if questionNumber + 1 == test.count {
             return true
@@ -160,7 +161,6 @@ class MDMTestViewController: UIViewController {
             return false
         }
     }
-    
     
     func downloadLecture(nazwaPliku: String, fishished: @escaping () -> Void) {
         
@@ -177,25 +177,20 @@ class MDMTestViewController: UIViewController {
         }
     }
     
-    
     @objc func updateUI(file: String) {
         self.downloadLecture(nazwaPliku: file) {
             self.displayWebView()
-            print(self.getProgress())
         }
     }
     
-    
     func loadTest() {
-        db.collection("kategoria1").getDocuments { (querySnapshot, error) in
+        db.collection(courseName!).getDocuments { (querySnapshot, error) in
             if let e = error {
                 print("There was an issue with retrieving data from Firestore. \(e)")
             } else {
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
-                        //  print("Pierwszy doc")
                         let data = doc.data()
-//                        print(doc.documentID)
                         if let answer = data[C.Test.answer] as? Int,
                            let name = data[C.Test.fileName] as? String,
                            let buttonXc = data[C.Test.buttonXcoord] as? CGFloat,
@@ -208,7 +203,6 @@ class MDMTestViewController: UIViewController {
                             let testInfo = Exercise(exNumber: doc.documentID, goodAnswer: answer, fileName: name, buttonXcoord: buttonXc, button1Ycoord: button1Yc, button2Ycoord: button2Yc, button3Ycoord: button3Yc, button4Ycoord: button4Yc, buttonHeight: buttonH, buttonWidth: buttonW)
                             
                             self.test.append(testInfo)
-//                            print("Przed downloadLecture")
                             
                             DispatchQueue.main.async {
                                 self.updateUI(file: self.test[self.questionNumber].fileName)
@@ -225,5 +219,7 @@ class MDMTestViewController: UIViewController {
         let destinationVC = segue.destination as! MDMResultViewController
         destinationVC.score = score
         destinationVC.questions = test.count
+        destinationVC.courseName = courseName
+        destinationVC.tries = tries
     }
 }

@@ -12,15 +12,13 @@ import Firebase
 class MDMExampleViewController: UIViewController {
     
     let storage = Storage.storage()
-    var courseName: String = "przyklady/p1-T-2"
-
-    
+    var exampleName: String?
     let firebaseBrain = FirebaseBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firebaseBrain.downloadLecture(myName: courseName) {
+        firebaseBrain.downloadLecture(myName: exampleName!) {
             self.loadMyWebKit()
         }
     }

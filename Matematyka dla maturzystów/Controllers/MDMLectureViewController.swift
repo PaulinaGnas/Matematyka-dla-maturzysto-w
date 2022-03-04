@@ -13,17 +13,14 @@ import Firebase
 class MDMLectureViewController: UIViewController
 {
     let storage = Storage.storage()
-    var myUrl: URL?
-    
-    var nazwaKursu: String = "wyklady/Logika i zbiory"
-        
+    var lectureName: String?
     let firebaseBrain = FirebaseBrain()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        firebaseBrain.downloadLecture(myName: nazwaKursu) {
+        firebaseBrain.downloadLecture(myName: lectureName!) {
             self.loadMyWebKit()
         }
     }
